@@ -1,2 +1,2 @@
 # recipe-app-api
-Backend REST API with Django &amp; DRF - Advanced | Udemy Course
+Backend REST API with Django & DRF - Advanced | Udemy Course
