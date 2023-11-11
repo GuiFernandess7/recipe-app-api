@@ -45,7 +45,7 @@ class RecipeViewSets(viewsets.ModelViewSet):
         """Create a new recipe."""
         serializer.save(user=self.request.user)
 
-    # Detail means is the id of only ona image
+    # Detail means is the id of only one image
     @action(methods=['POST'], detail=True, url_path='upload-image')
     def upload_image(self, request, pk=None):
         """Upload an image to recipe."""
@@ -57,6 +57,7 @@ class RecipeViewSets(viewsets.ModelViewSet):
             return Response(serializer.data, status=status.HTTP_200_OK)
 
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
 
 class BaseRecipeAtrrViewSet(mixins.DestroyModelMixin,
                 mixins.UpdateModelMixin,
